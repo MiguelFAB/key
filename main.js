@@ -66,6 +66,6 @@ function uploadimg() {
 			otherkey();
 			document.getElementById("d1").innerHTML = "Você pressionou símbolo ou outra tecla";
 		}
-		
+		}
 	}
 
