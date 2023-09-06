@@ -29,7 +29,7 @@ function uploadimg() {
 		console.log(keyPressed);
 		
 		if ((keyPressed >= 97 && keyPressed <= 122) || (keyPressed >= 65 && keyPressed <= 90)) {
-			alphabetkey();
+			aplhabetkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla alfabética";
 			console.log("tecla do alfabeto");
 		} else {
@@ -46,14 +46,20 @@ function aplhabetkey()
 }
 function numberkey()
 {
-	
+	img_image= "número.png";
+	add();
+
 }
 function arrowkey()
 {
+	img_image= "direcional.png";
+	add();
+
 }
 function specialkey()
 {
-	
+	img_image= "especial.png";
+	add();
 }
 function otherkey()
 {
