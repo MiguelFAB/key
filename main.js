@@ -63,7 +63,7 @@ function specialkey()
 }
 function otherkey()
 {
-	img_image="otherkey.png";
+	img_image="outras.png";
 	add();
 }
 
