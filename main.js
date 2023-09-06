@@ -15,29 +15,6 @@ function add() {
 	img_imgTag.src = img_image;   // carregar uma imagem
 }
 
-function uploadimg() {
-
-	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
-}
-
-
-	window. addEventListener ("keydown", my_keydown);
-
-
-	function my_keydown(e) {
-		var keyPressed = e.keyCode;
-		console.log(keyPressed);
-		
-		if ((keyPressed >= 97 && keyPressed <= 122) || (keyPressed >= 65 && keyPressed <= 90)) {
-			aplhabetkey();
-			document.getElementById("d1").innerHTML = "Você pressionou uma tecla alfabética";
-			console.log("tecla do alfabeto");
-		} else {
-			otherkey();
-			document.getElementById("d1").innerHTML = "Você pressionou símbolo ou outra tecla";
-		}
-	}
-
 function aplhabetkey()
 {
 	img_image= "alfabeto.png";
@@ -54,16 +31,41 @@ function arrowkey()
 {
 	img_image= "direcional.png";
 	add();
+function uploadimg() {
 
+	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
 }
-function specialkey()
-{
-	img_image= "especial.png";
-	add();
-}
-function otherkey()
-{
-	img_image="outras.png";
-	add();
-}
+
+
+	window. addEventListener ("keydown", my_keydown);
+
+	function my_keydown(e) {
+		var keyPressed = e.keyCode;
+		console.log(keyPressed);
+		
+		if ((keyPressed >= 97 && keyPressed <= 122) || (keyPressed >= 65 && keyPressed <= 90)) {
+			aplhabetkey();
+			document.getElementById("d1").innerHTML = "Você pressionou uma tecla alfabética";
+			console.log("tecla do alfabeto");
+		} 
+		else if ((keyPressed >= 48 && keyPressed <= 57)) {
+			numberkey();
+			document.getElementById("d1").innerHTML = "Você pressionou uma tecla numerica";
+			console.log("tecla do numerica");
+		}
+		else if ((keyPressed >= 37 && keyPressed <= 40)) {
+			arrowkey();
+			document.getElementById("d1").innerHTML = "Você pressionou uma tecla direcional";
+			console.log("tecla do direcional");
+		}
+		else if ((keyPressed == 17 || keyPressed == 18 || keyPressed == 27)) {
+			specialkey();
+			document.getElementById("d1").innerHTML = "Você pressionou uma tecla especiall";
+			console.log("tecla do especial");
+		}else {
+			otherkey();
+			document.getElementById("d1").innerHTML = "Você pressionou símbolo ou outra tecla";
+		}
+		
+	}
 
