@@ -31,6 +31,7 @@ function arrowkey()
 {
 	img_image= "direcional.png";
 	add();
+}
 function uploadimg() {
 
 	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
@@ -66,6 +67,6 @@ function uploadimg() {
 			otherkey();
 			document.getElementById("d1").innerHTML = "Você pressionou símbolo ou outra tecla";
 		}
-		}
+	
 	}
 
